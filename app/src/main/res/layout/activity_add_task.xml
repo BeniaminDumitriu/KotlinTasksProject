@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_from_add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_add_task"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_ios_left" />
+
+    <TextView
+        android:id="@+id/add_task_title_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/add_task"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/space_40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_add_task"
+        app:layout_constraintEnd_toStartOf="@+id/add_task_imageView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/back_from_add_task"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_task_imageView"
+        android:layout_width="@dimen/space_50dp"
+        android:layout_height="@dimen/space_50dp"
+        android:layout_marginEnd="@dimen/space_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_add_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frame_plus_center" />
+
+    <TextView
+        android:id="@+id/text_place_f_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_24dp"
+        android:layout_marginTop="@dimen/space_50dp"
+        android:lineSpacingExtra="@dimen/space_5dp"
+        android:text="@string/Name_add_task"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/text_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_add_task" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Name_txtInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:layout_marginEnd="@dimen/space_24dp"
+        android:background="@drawable/round_rect_shape"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_place_f_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_place_f_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Name_txtInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/enter_name_add_task"
+            android:paddingBottom="@dimen/space_10sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_task_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:lineSpacingExtra="@dimen/space_5dp"
+        android:text="@string/deadline_add_task"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/text_14sp"
+        app:layout_constraintStart_toStartOf="@+id/text_place_f_name"
+        app:layout_constraintTop_toBottomOf="@+id/Name_txtInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/deadline_txtInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:layout_marginEnd="@dimen/space_24dp"
+        android:background="@drawable/round_rect_shape"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_task_deadline"
+        app:layout_constraintTop_toBottomOf="@+id/add_task_deadline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/deadline_txtInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/type_deadline_add_task"
+            android:paddingBottom="@dimen/space_10sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/description_add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:lineSpacingExtra="@dimen/space_5dp"
+        android:text="@string/description_text"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/text_14sp"
+        app:layout_constraintStart_toStartOf="@+id/deadline_txtInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/deadline_txtInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description_txtInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:layout_marginEnd="@dimen/space_24dp"
+        android:background="@drawable/round_rect_shape"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/description_add_task"
+        app:layout_constraintTop_toBottomOf="@+id/description_add_task">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description_txtInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/description_add_task"
+            android:paddingBottom="@dimen/space_10sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_200dp"
+        android:text="@string/personal_radio_button"
+        android:layout_marginStart="@dimen/space_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_txtInputLayout" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/work_radio_button"
+        app:layout_constraintStart_toStartOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/school_radio_button"
+        app:layout_constraintStart_toStartOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

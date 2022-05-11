@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/to_do_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_do_main_status"
+        android:textSize="@dimen/space_24sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/space_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_tasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main" />
+
+    <TextView
+        android:id="@+id/in_progress_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/in_progress_main_status"
+        android:textColor="@color/black"
+        android:textSize="@dimen/space_24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_tasks"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_tasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/done_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done_main_status"
+        android:textColor="@color/black"
+        android:textSize="@dimen/space_24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_tasks"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_tasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/in_progress_status" />
+
+
+    <ImageView
+        android:id="@+id/imageView_tasks"
+        android:layout_width="170dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="@dimen/space_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tasks_main" />
+
+    <ImageView
+        android:id="@+id/imageView_calendar"
+        android:layout_width="171dp"
+        android:layout_height="162dp"
+        android:layout_marginEnd="@dimen/space_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:srcCompat="@drawable/calendar_main" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
